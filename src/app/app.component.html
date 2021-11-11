@@ -1,0 +1,28 @@
+
+
+<div class="card-head">
+  <h1 mat-header>Los Numeros en 3 Idiomas</h1>
+</div>
+<br>
+<div class='card.body'>
+  <div class='row'>
+    <h3 class='col-md-2'>Ingrese si desea los números en Castellano, Inglés o Portugues</h3>
+    <div class='col-md-4'>
+      <input type='text' [(ngModel)]='LettersPipe'/>
+    </div>
+  </div>
+</div>
+<br>
+
+<h2>Los Números en Castellano</h2>
+<ul>
+  <li *ngFor = "let valor of vector">{{valor | lettersPipe }}</li>
+</ul>
+<h2>Los Números en Inglés</h2>
+<ul>
+  <li *ngFor = "let valor of vector">{{valor | lettersPipe: 'Ingles' }}</li>
+</ul>
+<h2>Los Números en Portugues</h2>
+<ul>
+  <li *ngFor = "let valor of vector">{{valor | lettersPipe: 'Portugues' }}</li>
+</ul>
